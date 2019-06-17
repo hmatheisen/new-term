@@ -1,7 +1,7 @@
 #+TITLE: New Term Window
 #+AUTHOR: Henry MATHEISEN
 
-A Script to open a new horizontal terminal window in one command.
+A script to open a new horizontal terminal window in one command.
 
 ** How to use it
 
