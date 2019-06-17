@@ -1,0 +1,17 @@
+#+TITLE: New Term
+#+AUTHOR: Henry MATHEISEN
+
+* New Term Window 
+
+A Script to open a new horizontal terminal window in one command.
+
+** How to use it
+
+In order to use, it, you simply need to bind a key to the ~new-term-window~.
+
+#+BEGIN_SRC emacs-lisp
+(require 'new-term-window)
+
+(global-set-key (kbd "C-x t") 'new-term-window)
+#+END_SRC
+
