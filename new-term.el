@@ -55,6 +55,6 @@ If there is an existing terminal already, we open it in the new window"
 	  (other-window 1)
 	  (ansi-term "/bin/bash"))))
 
-(global-set-key (kbd "C-x t") 'new-term-window)
+(provide 'new-term-window)
 
 ;;; new-term.el ends here
