@@ -8,8 +8,13 @@ A script to open a new horizontal terminal window in one command.
 In order to use, it, you simply need to bind a key to the ~new-term-window~.
 
 #+BEGIN_SRC emacs-lisp
-(require 'new-term-window)
+(require 'new-term)
 
-(global-set-key (kbd "C-x t") 'new-term-window)
+(global-set-key (kbd "C-x t") 'toggle-term-window)
+(global-set-key (kbd "C-x <up>") 'bigger-term-window)
+(global-set-key (kbd "C-x <down>") 'smaller-term-window)
 #+END_SRC
 
+** Demo
+
+[[file:demo.mov][demo]]
