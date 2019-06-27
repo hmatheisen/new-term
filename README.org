@@ -17,4 +17,4 @@ In order to use, it, you simply need to bind a key to the ~new-term-window~.
 
 ** Demo
 
-[[file:demo.mov][demo]]
+[[file:demo.gif][demo]]
