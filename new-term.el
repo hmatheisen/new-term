@@ -88,6 +88,15 @@ If there is an existing terminal already, we open it in the new window"
 	  (shrink-window (- (calc-new-term-size) 1))
 	(message "%s" "Error: Not in a term window")))
 
+(defun quit-term ()
+  "Close the window and quit the process."
+  (interactive)
+  (if (member (current-buffer) (find-term-buffers))
+	  (progn
+		(kill-buffer (current-buffer))
+		(delete-window))
+	(message "%s" "Error: Not in a term window")))
+
 (provide 'new-term)
 
 ;;; new-term.el ends here
