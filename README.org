@@ -3,8 +3,6 @@
 
 A script to open a new horizontal terminal window in one command.
 
-[[file:new-term-demo.gif]]
-
 ** How to install it
 
    #+BEGIN_SRC bash
