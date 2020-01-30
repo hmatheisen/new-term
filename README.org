@@ -6,7 +6,7 @@ A script to open a new horizontal terminal window in one command.
 ** How to install it
 
    #+BEGIN_SRC bash
-	 git clone https://github.com/hmatheisen/new-term	
+     git clone https://github.com/hmatheisen/new-term	
    #+END_SRC
 
    This package is not on MELPA since there already is one similar,
@@ -21,26 +21,26 @@ A script to open a new horizontal terminal window in one command.
    does not interfere with other commands but only the ones in =Term mode=.
 
    #+BEGIN_SRC emacs-lisp
-	 (require 'new-term)
+     (require 'new-term)
 
-	 ;; Set the term toggle as a global command
-	 (global-set-key (kbd "C-x t") 'toggle-term-window)
+     ;; Set the term toggle as a global command
+     (global-set-key (kbd "C-x t") 'toggle-term-window)
 
-	 ;; Set the other utilities in in the command map
-	 (define-key term-raw-map (kbd "C-c <up>") 'bigger-term-window)
-	 (define-key term-raw-map (kbd "C-c <down>") 'smaller-term-window)
-	 (define-key term-raw-map (kbd "C-c q") 'quit-term)
+     ;; Set the other utilities in in the command map
+     (define-key term-raw-map (kbd "C-c <up>") 'bigger-term-window)
+     (define-key term-raw-map (kbd "C-c <down>") 'smaller-term-window)
+     (define-key term-raw-map (kbd "C-c q") 'quit-term)
    #+END_SRC
 
    Or if you use =use-package=:
 
    #+BEGIN_SRC emacs-lisp
-	 (use-package new-term
-	   :init
-	   (global-set-key (kbd "C-x t") 'toggle-term-window)
-	   (define-key term-raw-map (kbd "C-c <up>") 'bigger-term-window)
-	   (define-key term-raw-map (kbd "C-c <down>") 'smaller-term-window)
-	   (define-key term-raw-map (kbd "C-c q") 'quit-term))
+     (use-package new-term
+       :init
+       (global-set-key (kbd "C-x t") 'toggle-term-window)
+       (define-key term-raw-map (kbd "C-c <up>") 'bigger-term-window)
+       (define-key term-raw-map (kbd "C-c <down>") 'smaller-term-window)
+       (define-key term-raw-map (kbd "C-c q") 'quit-term))
    #+END_SRC
 
  
