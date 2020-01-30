@@ -6,7 +6,7 @@ A script to open a new horizontal terminal window in one command.
 ** How to install it
 
    #+BEGIN_SRC bash
-     git clone https://github.com/hmatheisen/new-term	
+   git clone https://github.com/hmatheisen/new-term	
    #+END_SRC
 
    This package is not on MELPA since there already is one similar,
@@ -42,5 +42,3 @@ A script to open a new horizontal terminal window in one command.
        (define-key term-raw-map (kbd "C-c <down>") 'smaller-term-window)
        (define-key term-raw-map (kbd "C-c q") 'quit-term))
    #+END_SRC
-
- 
