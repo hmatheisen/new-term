@@ -5,40 +5,44 @@ A script to open a new horizontal terminal window in one command.
 
 ** How to install it
 
-   #+BEGIN_SRC bash
+#+BEGIN_SRC bash
    git clone https://github.com/hmatheisen/new-term	
-   #+END_SRC
+#+END_SRC
 
-   This package is not on MELPA since there already is one similar,
-   but I didn't like it so I made a new one :)
+This package is not on MELPA since there already is one similar,
+but I didn't like it so I made a new one :)
 
 ** How to use it
 
-   In order to use, it, you simply need to bind the a key to the
-   =toggle-term-window=
+In order to use, it, you simply need to bind the a key to the
+=toggle-term-window=
 
-   Then you can map the utilities functions to the =term-raw-map= so it
-   does not interfere with other commands but only the ones in =Term mode=.
+Then you can map the utilities functions to the =term-raw-map= so it
+does not interfere with other commands but only the ones in =Term mode=.
 
-   #+BEGIN_SRC emacs-lisp
-     (require 'new-term)
+#+BEGIN_SRC emacs-lisp
+(require 'new-term)
 
-     ;; Set the term toggle as a global command
-     (global-set-key (kbd "C-x t") 'toggle-term-window)
+;; Set the term toggle as a global command
+(global-set-key (kbd "C-x t") 'toggle-term-window)
 
-     ;; Set the other utilities in in the command map
-     (define-key term-raw-map (kbd "C-c <up>") 'bigger-term-window)
-     (define-key term-raw-map (kbd "C-c <down>") 'smaller-term-window)
-     (define-key term-raw-map (kbd "C-c q") 'quit-term)
-   #+END_SRC
+;; Set the other utilities in in the command map
+(define-key term-raw-map (kbd "C-c <up>") 'bigger-term-window)
+(define-key term-raw-map (kbd "C-c <down>") 'smaller-term-window)
+(define-key term-raw-map (kbd "C-c q") 'quit-term)
+#+END_SRC
 
-   Or if you use =use-package=:
+Or if you use =use-package=:
 
-   #+BEGIN_SRC emacs-lisp
-     (use-package new-term
-       :init
-       (global-set-key (kbd "C-x t") 'toggle-term-window)
-       (define-key term-raw-map (kbd "C-c <up>") 'bigger-term-window)
-       (define-key term-raw-map (kbd "C-c <down>") 'smaller-term-window)
-       (define-key term-raw-map (kbd "C-c q") 'quit-term))
-   #+END_SRC
+#+BEGIN_SRC emacs-lisp
+(use-package new-term
+  :init
+  (global-set-key (kbd "C-x t") 'toggle-term-window)
+  (define-key term-raw-map (kbd "C-c <up>") 'bigger-term-window)
+  (define-key term-raw-map (kbd "C-c <down>") 'smaller-term-window)
+  (define-key term-raw-map (kbd "C-c q") 'quit-term))
+#+END_SRC
+
+For now it only works with =ansi-term= since it is the terminal that I
+use on a daily basis within Emacs but I plan on implementing a way to
+set a terminal program as a variable.
